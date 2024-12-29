@@ -62,7 +62,7 @@ uint8_t am2320_interface_bus_deinit(void)
 
 /**
  * @brief      interface bus read
- * @param[out] *value points to a value buffer
+ * @param[out] *value pointer to a value buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -75,7 +75,7 @@ uint8_t am2320_interface_bus_read(uint8_t *value)
 
 /**
  * @brief     interface bus write
- * @param[in] value is the written value
+ * @param[in] value written value
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -112,9 +112,9 @@ uint8_t am2320_interface_iic_deinit(void)
 
 /**
  * @brief      interface iic read command
- * @param[in]  addr is the iic device write address
- * @param[out] *buf points to a data buffer
- * @param[in]  len is the length of the data buffer
+ * @param[in]  addr iic device write address
+ * @param[out] *buf pointer to a data buffer
+ * @param[in]  len length of the data buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -127,9 +127,9 @@ uint8_t am2320_interface_iic_read_cmd(uint8_t addr, uint8_t *buf, uint16_t len)
 
 /**
  * @brief     interface iic write command
- * @param[in] addr is the iic device write address
- * @param[in] *buf points to a data buffer
- * @param[in] len is the length of the data buffer
+ * @param[in] addr iic device write address
+ * @param[in] *buf pointer to a data buffer
+ * @param[in] len length of the data buffer
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -142,7 +142,7 @@ uint8_t am2320_interface_iic_write_cmd(uint8_t addr, uint8_t *buf, uint16_t len)
 
 /**
  * @brief     interface delay ms
- * @param[in] ms
+ * @param[in] ms time
  * @note      none
  */
 void am2320_interface_delay_ms(uint32_t ms)
@@ -152,7 +152,7 @@ void am2320_interface_delay_ms(uint32_t ms)
 
 /**
  * @brief     interface delay us
- * @param[in] us
+ * @param[in] us time
  * @note      none
  */
 void am2320_interface_delay_us(uint32_t us)
@@ -180,7 +180,7 @@ void am2320_interface_disable_irq(void)
 
 /**
  * @brief     interface print format data
- * @param[in] fmt is the format data
+ * @param[in] fmt format data
  * @note      none
  */
 void am2320_interface_debug_print(const char *const fmt, ...)

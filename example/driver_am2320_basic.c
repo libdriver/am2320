@@ -40,7 +40,7 @@ static am2320_handle_t gs_handle;        /**< am2320 handle */
 
 /**
  * @brief     basic example init
- * @param[in] interface is the chip interface
+ * @param[in] interface chip interface
  * @return    status code
  *            - 0 success
  *            - 1 init failed
@@ -89,8 +89,8 @@ uint8_t am2320_basic_init(am2320_interface_t interface)
 
 /**
  * @brief      basic example read
- * @param[out] *temperature points to a converted temperature buffer
- * @param[out] *humidity points to a converted humidity buffer
+ * @param[out] *temperature pointer to a converted temperature buffer
+ * @param[out] *humidity pointer to a converted humidity buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -131,7 +131,7 @@ uint8_t am2320_basic_deinit(void)
 
 /**
  * @brief     basic example set user reg1
- * @param[in] reg is the set reg value
+ * @param[in] reg register address
  * @return    status code
  *            - 0 success
  *            - 1 set user reg1 failed
@@ -150,7 +150,7 @@ uint8_t am2320_basic_set_user_reg1(uint16_t reg)
 
 /**
  * @brief      basic example get user reg1
- * @param[out] *reg points to a reg value buffer
+ * @param[out] *reg pointer to a reg value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get user reg1 failed
@@ -169,7 +169,7 @@ uint8_t am2320_basic_get_user_reg1(uint16_t *reg)
 
 /**
  * @brief     basic example set user reg2
- * @param[in] reg is the set reg value
+ * @param[in] reg register address
  * @return    status code
  *            - 0 success
  *            - 1 set user reg2 failed
@@ -188,7 +188,7 @@ uint8_t am2320_basic_set_user_reg2(uint16_t reg)
 
 /**
  * @brief      basic example get user reg2
- * @param[out] *reg points to a reg value buffer
+ * @param[out] *reg pointer to a reg value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get user reg2 failed

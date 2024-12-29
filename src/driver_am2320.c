@@ -127,8 +127,8 @@ static const uint8_t gs_crc_table_lo[] =
 
 /**
  * @brief     generate the crc16
- * @param[in] *data points to a data buffer
- * @param[in] count is the data length
+ * @param[in] *data pointer to a data buffer
+ * @param[in] count length of data
  * @return    crc
  * @note      none
  */
@@ -150,7 +150,7 @@ static uint16_t a_am2320_generate_crc16(uint8_t *data, uint16_t count)
 
 /**
  * @brief     reset the chip
- * @param[in] *handle points to an am2320 handle structure
+ * @param[in] *handle pointer to an am2320 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 no response
@@ -247,8 +247,8 @@ static uint8_t a_am2320_reset(am2320_handle_t *handle)
 
 /**
  * @brief      read one bit
- * @param[in]  *handle points to an am2320 handle structure
- * @param[out] *value points to a value buffer
+ * @param[in]  *handle pointer to an am2320 handle structure
+ * @param[out] *value pointer to a value buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -314,8 +314,8 @@ static uint8_t a_am2320_read_bit(am2320_handle_t *handle, uint8_t *value)
 
 /**
  * @brief      read one byte
- * @param[in]  *handle points to an am2320 handle structure
- * @param[out] *byte points to a byte buffer
+ * @param[in]  *handle pointer to an am2320 handle structure
+ * @param[out] *byte pointer to a byte buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -346,8 +346,8 @@ static uint8_t a_am2320_read_byte(am2320_handle_t *handle, uint8_t *byte)
 
 /**
  * @brief     set the chip interface
- * @param[in] *handle points to an am2320 handle structure
- * @param[in] interface is the chip interface
+ * @param[in] *handle pointer to an am2320 handle structure
+ * @param[in] interface chip interface
  * @return    status code
  *            - 0 success
  *            - 2 handle is NULL
@@ -367,8 +367,8 @@ uint8_t am2320_set_interface(am2320_handle_t *handle, am2320_interface_t interfa
 
 /**
  * @brief      get the chip interface
- * @param[in]  *handle points to an am2320 handle structure
- * @param[out] *interface points to a chip interface buffer
+ * @param[in]  *handle pointer to an am2320 handle structure
+ * @param[out] *interface pointer to a chip interface buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -388,9 +388,9 @@ uint8_t am2320_get_interface(am2320_handle_t *handle, am2320_interface_t *interf
 
 /**
  * @brief      read the humidity data
- * @param[in]  *handle points to an am2320 handle structure
- * @param[out] *raw points to a raw humidity buffer
- * @param[out] *s points to a converted humidity buffer
+ * @param[in]  *handle pointer to an am2320 handle structure
+ * @param[out] *raw pointer to a raw humidity buffer
+ * @param[out] *s pointer to a converted humidity buffer
  * @return     status code
  *             - 0 success
  *             - 1 read humidity failed
@@ -503,11 +503,11 @@ uint8_t am2320_read_humidity(am2320_handle_t *handle, uint16_t *raw, float *s)
 
 /**
  * @brief      read the temperature and humidity data
- * @param[in]  *handle points to an am2320 handle structure
- * @param[out] *temperature_raw points to a raw temperature buffer
- * @param[out] *temperature_s points to a converted temperature buffer
- * @param[out] *humidity_raw points to a raw humidity buffer
- * @param[out] *humidity_s points to a converted humidity buffer
+ * @param[in]  *handle pointer to an am2320 handle structure
+ * @param[out] *temperature_raw pointer to a raw temperature buffer
+ * @param[out] *temperature_s pointer to a converted temperature buffer
+ * @param[out] *humidity_raw pointer to a raw humidity buffer
+ * @param[out] *humidity_s pointer to a converted humidity buffer
  * @return     status code
  *             - 0 success
  *             - 1 read temperature humidity failed
@@ -642,9 +642,9 @@ uint8_t am2320_read_temperature_humidity(am2320_handle_t *handle, uint16_t *temp
 
 /**
  * @brief      read the temperature data
- * @param[in]  *handle points to an am2320 handle structure
- * @param[out] *raw points to a raw temperature buffer
- * @param[out] *s points to a converted temperature buffer
+ * @param[in]  *handle pointer to an am2320 handle structure
+ * @param[out] *raw pointer to a raw temperature buffer
+ * @param[out] *s pointer to a converted temperature buffer
  * @return     status code
  *             - 0 success
  *             - 1 read temperature failed
@@ -775,8 +775,8 @@ uint8_t am2320_read_temperature(am2320_handle_t *handle, uint16_t *raw, float *s
 
 /**
  * @brief      get device type
- * @param[in]  *handle points to an am2320 handle structure
- * @param[out] *type points to a type buffer
+ * @param[in]  *handle pointer to an am2320 handle structure
+ * @param[out] *type pointer to a type buffer
  * @return     status code
  *             - 0 success
  *             - 1 get device type failed
@@ -853,8 +853,8 @@ uint8_t am2320_get_device_type(am2320_handle_t *handle, uint16_t *type)
 
 /**
  * @brief      get version
- * @param[in]  *handle points to an am2320 handle structure
- * @param[out] *version points to a version buffer
+ * @param[in]  *handle pointer to an am2320 handle structure
+ * @param[out] *version pointer to a version buffer
  * @return     status code
  *             - 0 success
  *             - 1 get version failed
@@ -931,8 +931,8 @@ uint8_t am2320_get_version(am2320_handle_t *handle, uint8_t *version)
 
 /**
  * @brief      get status
- * @param[in]  *handle points to an am2320 handle structure
- * @param[out] *status points to a status buffer
+ * @param[in]  *handle pointer to an am2320 handle structure
+ * @param[out] *status pointer to a status buffer
  * @return     status code
  *             - 0 success
  *             - 1 get status failed
@@ -1009,8 +1009,8 @@ uint8_t am2320_get_status(am2320_handle_t *handle, uint8_t *status)
 
 /**
  * @brief      get device id
- * @param[in]  *handle points to an am2320 handle structure
- * @param[out] *id points to an id buffer
+ * @param[in]  *handle pointer to an am2320 handle structure
+ * @param[out] *id pointer to an id buffer
  * @return     status code
  *             - 0 success
  *             - 1 get device id failed
@@ -1088,8 +1088,8 @@ uint8_t am2320_get_device_id(am2320_handle_t *handle, uint32_t *id)
 
 /**
  * @brief     set user reg1
- * @param[in] *handle points to an am2320 handle structure
- * @param[in] reg is the set reg
+ * @param[in] *handle pointer to an am2320 handle structure
+ * @param[in] reg register address
  * @return    status code
  *            - 0 success
  *            - 1 set user reg1 failed
@@ -1176,8 +1176,8 @@ uint8_t am2320_set_user_reg1(am2320_handle_t *handle, uint16_t reg)
 
 /**
  * @brief      get user reg1
- * @param[in]  *handle points to an am2320 handle structure
- * @param[out] *reg points to a reg buffer
+ * @param[in]  *handle pointer to an am2320 handle structure
+ * @param[out] *reg pointer to a reg buffer
  * @return     status code
  *             - 0 success
  *             - 1 get user reg1 failed
@@ -1254,8 +1254,8 @@ uint8_t am2320_get_user_reg1(am2320_handle_t *handle, uint16_t *reg)
 
 /**
  * @brief     set user reg2
- * @param[in] *handle points to an am2320 handle structure
- * @param[in] reg is the set reg
+ * @param[in] *handle pointer to an am2320 handle structure
+ * @param[in] reg register address
  * @return    status code
  *            - 0 success
  *            - 1 set user reg2 failed
@@ -1342,8 +1342,8 @@ uint8_t am2320_set_user_reg2(am2320_handle_t *handle, uint16_t reg)
 
 /**
  * @brief      get user reg2
- * @param[in]  *handle points to an am2320 handle structure
- * @param[out] *reg points to a reg buffer
+ * @param[in]  *handle pointer to an am2320 handle structure
+ * @param[out] *reg pointer to a reg buffer
  * @return     status code
  *             - 0 success
  *             - 1 get user reg2 failed
@@ -1420,7 +1420,7 @@ uint8_t am2320_get_user_reg2(am2320_handle_t *handle, uint16_t *reg)
 
 /**
  * @brief     initialize the chip
- * @param[in] *handle points to an am2320 handle structure
+ * @param[in] *handle pointer to an am2320 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 bus initialization failed
@@ -1544,7 +1544,7 @@ uint8_t am2320_init(am2320_handle_t *handle)
 
 /**
  * @brief     close the chip
- * @param[in] *handle points to an am2320 handle structure
+ * @param[in] *handle pointer to an am2320 handle structure
  * @return    status code
  *            - 0 success
  *            - 1 bus deinit failed
@@ -1588,11 +1588,11 @@ uint8_t am2320_deinit(am2320_handle_t *handle)
 
 /**
  * @brief      set and get the register value
- * @param[in]  *handle points to an am2320 handle structure
- * @param[in]  *input_buf points to an input data buffer
- * @param[in]  input_len is the length of the input data buffer
- * @param[out] *output_buf points to an output data buffer
- * @param[in]  output_len is the length of the output data buffer
+ * @param[in]  *handle pointer to an am2320 handle structure
+ * @param[in]  *input_buf pointer to an input data buffer
+ * @param[in]  input_len length of the input data buffer
+ * @param[out] *output_buf pointer to an output data buffer
+ * @param[in]  output_len length of the output data buffer
  * @return     status code
  *             - 0 success
  *             - 1 set get reg failed
@@ -1643,7 +1643,7 @@ uint8_t am2320_set_get_reg(am2320_handle_t *handle, uint8_t *input_buf, uint16_t
 
 /**
  * @brief      get chip's information
- * @param[out] *info points to an am2320 info structure
+ * @param[out] *info pointer to an am2320 info structure
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
