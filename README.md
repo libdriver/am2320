@@ -10,7 +10,7 @@
 
 AM2320 is a temperature and humidity composite sensor with a calibrated digital signal output. Dedicated RH&T gathering technology ensures high reliability and excellent long-term stability. The sensor consists of a capacitive sensing element and a high precision integrated temperature measuring element connected to a high performance microprocessor. The communication mode of the product adopts single bus and standard I2C communication modes. The standard single bus interface makes system integration quick and easy. The I2C communication mode uses standard communication timing, and the user can directly hang on the I2C communication bus without additional wiring and is easy to use. Both communication methods use direct output of temperature-compensated digital information such as humidity, temperature and check CRC. The user does not need to perform secondary calculation on the digital output, nor does it need to compensate the humidity for temperature, so that accurate temperature and humidity can be obtained. The two communication modes can be switched freely, and the user can freely choose and use it conveniently, and it should be widely used. The product is 4-lead, easy to connect, and the special package form can be provided according to user needs.
 
-LibDriver AM2320 is the full function driver of AM2320 launched by LibDriver.It provides the function of reading temperature and relative humidity. LibDriver is MISRA compliant.
+LibDriver AM2320 is a full-featured driver of AM2320 launched by LibDriver.It provides the function of reading temperature and relative humidity. LibDriver is MISRA compliant.
 
 ### Table of Contents
 
