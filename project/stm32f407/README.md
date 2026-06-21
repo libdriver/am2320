@@ -106,8 +106,8 @@ am2320: driver version is 1.0.
 am2320: min supply voltage is 3.1V.
 am2320: max supply voltage is 5.5V.
 am2320: max current is 0.95mA.
-am2320: max temperature is 60.0C.
-am2320: min temperature is -20.0C.
+am2320: max temperature is 80.0C.
+am2320: min temperature is -40.0C.
 ```
 
 ```shell
