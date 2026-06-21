@@ -44,8 +44,8 @@
 #define SUPPLY_VOLTAGE_MIN       3.1f                  /**< chip min supply voltage */
 #define SUPPLY_VOLTAGE_MAX       5.5f                  /**< chip max supply voltage */
 #define MAX_CURRENT              0.95f                 /**< chip max current */
-#define TEMPERATURE_MIN          -20.0f                /**< chip min operating temperature */
-#define TEMPERATURE_MAX          60.0f                 /**< chip max operating temperature */
+#define TEMPERATURE_MIN          -40.0f                /**< chip min operating temperature */
+#define TEMPERATURE_MAX          80.0f                 /**< chip max operating temperature */
 #define DRIVER_VERSION           1000                  /**< driver version */
 
 /**
