@@ -417,7 +417,7 @@ $(function(){initNavTree('driver__am2320_8c_source.html','',''); });
 <div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>                }</div>
 <div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>            }</div>
 <div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>            handle-&gt;<a class="code hl_variable" href="structam2320__handle__s.html#a06c0ed41fc67fd360798b30e8ce1d480">enable_irq</a>();                                                   <span class="comment">/* enable interrupt */</span></div>
-<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>            <span class="keywordflow">if</span> ((buf[0] + buf[1] + buf[2] + buf[3]) == buf[4])                      <span class="comment">/* calculate checksum */</span></div>
+<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>            <span class="keywordflow">if</span> (((buf[0] + buf[1] + buf[2] + buf[3]) &amp; 0xFF) == buf[4])             <span class="comment">/* calculate checksum */</span></div>
 <div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>            {</div>
 <div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span>                *raw = (uint16_t)buf[0] &lt;&lt; 8 | buf[1];                              <span class="comment">/* get raw data */</span></div>
 <div class="line"><a id="l00434" name="l00434"></a><span class="lineno">  434</span>                *s = (float)(*raw) / 10.0f;                                         <span class="comment">/* convert raw data to real data */</span></div>
@@ -522,7 +522,7 @@ $(function(){initNavTree('driver__am2320_8c_source.html','',''); });
 <div class="line"><a id="l00545" name="l00545"></a><span class="lineno">  545</span>                }</div>
 <div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>            }</div>
 <div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>            handle-&gt;<a class="code hl_variable" href="structam2320__handle__s.html#a06c0ed41fc67fd360798b30e8ce1d480">enable_irq</a>();                                                   <span class="comment">/* enable interrupt */</span></div>
-<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>            <span class="keywordflow">if</span> ((buf[0] + buf[1] + buf[2] + buf[3]) == buf[4])                      <span class="comment">/* calculate checksum */</span></div>
+<div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>            <span class="keywordflow">if</span> (((buf[0] + buf[1] + buf[2] + buf[3]) &amp; 0xFF) == buf[4])             <span class="comment">/* calculate checksum */</span></div>
 <div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>            {</div>
 <div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>                <span class="keywordflow">if</span> ((buf[2] &amp; (1 &lt;&lt; 7)) != 0)                                       <span class="comment">/* if temperature is below zero */</span></div>
 <div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>                {</div>
@@ -649,7 +649,7 @@ $(function(){initNavTree('driver__am2320_8c_source.html','',''); });
 <div class="line"><a id="l00682" name="l00682"></a><span class="lineno">  682</span>                }</div>
 <div class="line"><a id="l00683" name="l00683"></a><span class="lineno">  683</span>            }</div>
 <div class="line"><a id="l00684" name="l00684"></a><span class="lineno">  684</span>            handle-&gt;<a class="code hl_variable" href="structam2320__handle__s.html#a06c0ed41fc67fd360798b30e8ce1d480">enable_irq</a>();                                                   <span class="comment">/* enable interrupt */</span></div>
-<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>            <span class="keywordflow">if</span> ((buf[0] + buf[1] + buf[2] + buf[3]) == buf[4])                      <span class="comment">/* calculate checksum */</span></div>
+<div class="line"><a id="l00685" name="l00685"></a><span class="lineno">  685</span>            <span class="keywordflow">if</span> (((buf[0] + buf[1] + buf[2] + buf[3]) &amp; 0xFF) == buf[4])             <span class="comment">/* calculate checksum */</span></div>
 <div class="line"><a id="l00686" name="l00686"></a><span class="lineno">  686</span>            {</div>
 <div class="line"><a id="l00687" name="l00687"></a><span class="lineno">  687</span>                <span class="keywordflow">if</span> ((buf[2] &amp; (1 &lt;&lt; 7)) != 0)                                       <span class="comment">/* if temperature is below zero */</span></div>
 <div class="line"><a id="l00688" name="l00688"></a><span class="lineno">  688</span>                {</div>
