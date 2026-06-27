@@ -428,7 +428,7 @@ uint8_t am2320_read_humidity(am2320_handle_t *handle, uint16_t *raw, float *s)
                 }
             }
             handle->enable_irq();                                                   /* enable interrupt */
-            if ((buf[0] + buf[1] + buf[2] + buf[3]) == buf[4])                      /* calculate checksum */
+            if (((buf[0] + buf[1] + buf[2] + buf[3]) & 0xFF) == buf[4])             /* calculate checksum */
             {
                 *raw = (uint16_t)buf[0] << 8 | buf[1];                              /* get raw data */
                 *s = (float)(*raw) / 10.0f;                                         /* convert raw data to real data */
@@ -545,7 +545,7 @@ uint8_t am2320_read_temperature_humidity(am2320_handle_t *handle, uint16_t *temp
                 }
             }
             handle->enable_irq();                                                   /* enable interrupt */
-            if ((buf[0] + buf[1] + buf[2] + buf[3]) == buf[4])                      /* calculate checksum */
+            if (((buf[0] + buf[1] + buf[2] + buf[3]) & 0xFF) == buf[4])             /* calculate checksum */
             {
                 if ((buf[2] & (1 << 7)) != 0)                                       /* if temperature is below zero */
                 {
@@ -682,7 +682,7 @@ uint8_t am2320_read_temperature(am2320_handle_t *handle, uint16_t *raw, float *s
                 }
             }
             handle->enable_irq();                                                   /* enable interrupt */
-            if ((buf[0] + buf[1] + buf[2] + buf[3]) == buf[4])                      /* calculate checksum */
+            if (((buf[0] + buf[1] + buf[2] + buf[3]) & 0xFF) == buf[4])             /* calculate checksum */
             {
                 if ((buf[2] & (1 << 7)) != 0)                                       /* if temperature is below zero */
                 {
