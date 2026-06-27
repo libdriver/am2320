@@ -159,7 +159,7 @@ uint8_t shell_register(char *name, uint8_t (*fuc)(uint8_t argc, char **argv))
         return 1;
     }
     
-    strncpy(gs_shell.fuc[gs_shell.fuc_i].name, name, SHELL_MAX_NAME);
+    snprintf(gs_shell.fuc[gs_shell.fuc_i].name, SHELL_MAX_NAME, "%s", name);
     gs_shell.fuc[gs_shell.fuc_i].fuc = fuc;
     gs_shell.fuc_i++;
     
